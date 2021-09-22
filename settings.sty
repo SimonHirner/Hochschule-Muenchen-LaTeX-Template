@@ -35,16 +35,65 @@
 % Add list of abbreviations
 \usepackage{acronym}
 
+% Improve figure positioning
+\usepackage{float}
+
 
 % **************************************************
 % Bibliography
 % **************************************************
 
 % Use biblatex with biber for bibliography
-\usepackage[backend=biber, style=bath, sorting=none]{biblatex}
+\usepackage[backend=biber, style=authoryear, sorting=none]{biblatex}
 
 % Add source for bibliographic database
 \addbibresource{bibliography.bib}
 
 % Provide advanced quotations
 \usepackage{csquotes}
+
+
+% **************************************************
+% Source code formatting
+% **************************************************
+
+\renewcommand\lstlistingname{Quellcode}
+
+\renewcommand\lstlistlistingname{Quellcode}
+
+\lstset{ %
+    backgroundcolor=\color{white},
+    basicstyle=\footnotesize,
+    breaklines=true,
+    captionpos=b,
+    commentstyle=\color{green},
+    escapeinside={\%*}{*)},
+    keywordstyle=\color{blue},
+    stringstyle=\color{purple},
+    showstringspaces=false,
+    showspaces=false,
+    numbers=left,
+    numberstyle=\tiny,
+    frame=lines
+}
+
+
+% **************************************************
+% Header and footer
+% **************************************************
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\nouppercase{\leftmark}}
+\chead{}
+\rhead{\thepage}
+\lfoot{}
+\rfoot{}
+
+
+% **************************************************
+% Miscellaneous
+% **************************************************
+
+% Prevent identation of new paragraphs
+\setlength{\parindent}{0pt} 

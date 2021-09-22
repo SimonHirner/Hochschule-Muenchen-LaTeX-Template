@@ -5,7 +5,8 @@
 \documentclass[
 	a4paper,
 	12pt,
-	bibtotocnumbered,
+	bibtotoc,
+	listof=totoc,
 	titlepage
 ]{scrartcl}
 
@@ -23,46 +24,25 @@
 
 \newcommand*{\getUniversity}{Hochschule für angewandte Wissenschaften München}
 \newcommand*{\getFaculty}{Fakultät für Informatik und Mathematik}
-\newcommand*{\getTitle}{Der Titel deiner Semester-, Bachelorarbeit oder Masterarbeit}
+\newcommand*{\getTitle}{Konzeption und Implementierung einer Android-App zur Objekterkennung}
 \newcommand*{\getAuthor}{Max Mustermann}
 \newcommand*{\getMatriculationNumber}{08151337}
 \newcommand*{\getCourse}{Informatik}
 \newcommand*{\getDoctype}{Bachelorarbeit}
 \newcommand*{\getSupervisor}{Prof. Dr. Albert Einstein}
-\newcommand*{\getSubmissionDate}{20. Februar 2020}
+\newcommand*{\getSubmissionDate}{\today}
 
 
 % **************************************************
-% Metadata
+% PDF Metadata
 % **************************************************
 
 \hypersetup{
 	pdftitle = \getTitle,
 	pdfauthor = \getAuthor,
 	pdfsubject = \getDoctype
-	pdfkeywords = {Microservices, Kubernetes}
+	pdfkeywords = {Bachelorarbeit, Informatik}
 }
-
-
-% **************************************************
-% Header and footer
-% **************************************************
-
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{\nouppercase{\leftmark}}
-\chead{}
-\rhead{\thepage}
-\lfoot{}
-\rfoot{}
-
-
-% **************************************************
-% Headline for source code list
-% **************************************************
-
-\renewcommand\lstlistingname{Quellcode}
-\renewcommand\lstlistlistingname{Quellcode}
 
 
 % **************************************************
@@ -77,22 +57,28 @@
 
 \tableofcontents
 
-\newpage
+\clearpage
 \listoffigures
 
-\newpage
+\clearpage
+\listoftables
+
+\clearpage
 \lstlistoflistings
 
-\newpage
+\clearpage
 \input{pages/acronyms}
 
-\newpage
+\clearpage
 \input{chapters/01_introduction}
 
-\newpage
+\clearpage
 \input{chapters/99_conclusion}
 
-\newpage
+\clearpage
 \printbibliography
+
+\clearpage
+\input{pages/declaration}
 
 \end{document}
