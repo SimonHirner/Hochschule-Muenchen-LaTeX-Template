@@ -2,6 +2,11 @@
 
 Mein persönliches LaTeX Template für die Erstellung von Seminar-, Bachelor- oder Masterarbeiten an der Hochschule München.
 
+## Voraussetzungen
+
+- LaTeX-Distribution mit pdflatex und Biber als Backend für BibLaTeX
+- LaTeX-Editor
+
 ## Benutzung
 
 1. Dieses Repository klonen oder herunterladen
@@ -13,15 +18,18 @@ Mein persönliches LaTeX Template für die Erstellung von Seminar-, Bachelor- od
 - Abstract
 - Inhaltsverzeichnis
 - Abbildungsverzeichnis
+- Tabellenverzeichnis
 - Quellcodeverzeichnis
 - Abkürzungsverzeichnis
 - Inhalt
 - Literarturverzeichnis
+- Selbständigkeitserklärung
 
 ## Projektstruktur
 
 - `chapters`:  Enthählt die Kapitel der Arbeit
 - `figures`: Enthählt Bilder und Grafiken der Arbeit
+- `logos`: Enhält Logos für die Arbeit
 - `pages`: Enthält die Seiten für das Abstract, das Abkürzungsverzeichnis und das Titelblatt
 - `bachelor-thesis.tex`: Herzstück des Projektes, fügt alle Komponenten zu einer Arbeit zusammen
 - `bibliography.bib`: Enhält die Literaturangaben für die Arbeit
@@ -29,7 +37,7 @@ Mein persönliches LaTeX Template für die Erstellung von Seminar-, Bachelor- od
 
 ## Literaturverzeichnis
 
-Für das Literaturverzeichnis und Zitate wird BibLaTex verwendet. Die Literaturangaben werden in `bibliography.bib` eingefügt.
+Für das Literaturverzeichnis und Zitate wird BibLaTex verwendet. Die Literaturangaben werden in `bibliography.bib` eingefügt. Als Backend wird Biber verwendet.
 
 ## Lizenz
 
